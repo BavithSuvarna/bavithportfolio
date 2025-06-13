@@ -35,7 +35,7 @@ const Navbar = () => {
     <div className="absolute top-full right-0 left-0 bg-neutral-900 flex flex-col items-center gap-6 py-6 text-xl font-semibold text-white md:hidden">
       <a href="#journey" onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Journey</a>
       <a href="#projects" onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Projects</a>
-      <a href="#achievements" onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Achievements</a>
+      <a href="#technologies" onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Experience</a>
       <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Contact</a>
     </div>
   )}
