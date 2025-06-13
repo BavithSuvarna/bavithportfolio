@@ -52,24 +52,26 @@ export const PROJECTS = [
     description:
       "An AI-powered platform that detects deepfake media across multiple formats and securely records verification results using blockchain technology.",
     technologies: ["Python", "Tensorflow", "React", "Flask", "Smart Contracts(Blockchain)"],
-    github: "https://github.com/yourusername/deeplock",
+    github: "https://github.com/BavithSuvarna/DeepFake",
   },
   {
     title: "FakeShield",
     image: project2,
     description:
       "FakeShield is a machine learning-based system that detects fake social media accounts and AI-generated content by analyzing user behavior, profile data, and image authenticity.",
-    technologies: ["Python (Flask)", "HTML", "CSS", "JavaScript"],
+    technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/BavithSuvarna/FakeShield",
   },
-  // {
-  //   title: "MallTrack",
-  //   image: project3,
-  //   description:
-  //     "A PHP-based web application that streamlines mall operations through role-based access, rent tracking, and real-time data management using MySQL.",
-  //   technologies: ["HTML", "CSS", "PHP", "MySQL"],
-  //   github: "https://github.com/yourusername/malltrack",
-  // },
+  {
+  title: "My Portfolio",
+  image: project3,
+  description:
+    "My personal portfolio website to showcase my skills, projects, and contact details.",
+  technologies: ["React", "TailwindCSS", "Vercel"],
+  github: "https://github.com/BavithSuvarna/bavithportfolio",
+  demo: "https://bavithportfolio.vercel.app"
+},
+
   {
     title: "Personal Expense Tracker",
     image: project4,

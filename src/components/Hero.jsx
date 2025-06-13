@@ -14,7 +14,7 @@ const container = (delay) => ({
 const Hero = () => {
   return (
     <div className="border-b border-neutral-900 pb-8 lg:mb-36">
-      <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 px-4">
+      <div className="max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 px-4">
         
         {/* LEFT SECTION */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
@@ -57,14 +57,14 @@ const Hero = () => {
         </div>
 
         {/* RIGHT SECTION */}
-        <div className="w-full lg:w-1/2 flex justify-center ">
+        <div className="w-full lg:w-1/2 flex justify-center mt-16">
           <motion.img
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
             src={profilePic}
             alt="Bavith L Suvarna"
-            className="w-40 h-40 sm:w-60 sm:h-60 lg:w-72 lg:h-72 object-cover rounded-full shadow-lg dark:bg-neutral-900"
+            className="mb-10 w-40 h-40 sm:w-60 sm:h-60 lg:w-72 lg:h-72 object-cover rounded-full shadow-lg dark:bg-neutral-900"
           />
         </div>
       </div>

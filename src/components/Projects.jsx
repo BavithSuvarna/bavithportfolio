@@ -30,7 +30,7 @@ const Projects = () => {
 </h6>
 
 <p className="mb-4 text-neutral-400">{project.description}</p>
-<div className="mb-4">
+<div className="mb-4 flex gap-8">
   <a
     href={project.github}
     target="_blank"
@@ -40,7 +40,18 @@ const Projects = () => {
     <FaGithub size={16} />
     Explore
   </a>
+  {project.demo && (
+    <a
+      href={project.demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded bg-violet-800 px-4 py-1.5 text-sm font-medium text-white hover:bg-violet-700 transition"
+    >
+      Demo
+    </a>
+  )}
 </div>
+
 
 {project.technologies.map((tech, index) => (
   <span
