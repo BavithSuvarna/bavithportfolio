@@ -1,5 +1,5 @@
 import journeyImg1 from "../assets/SahyadriLogo.png";
-import journeyImg2 from "../assets/PPCLogo.jpeg";
+import journeyImg2 from "../assets/PPClogo.jpeg";
 import { motion } from "framer-motion";
 
 const About = () => {
