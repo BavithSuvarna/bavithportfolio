@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import project5 from "../assets/projects/project-5.jpg";
 
 import achievement1 from "../assets/achievements/achievement-1.jpg";
 import achievement2 from "../assets/achievements/achievement-2.jpg";
@@ -55,8 +56,17 @@ export const PROJECTS = [
     github: "https://github.com/BavithSuvarna/DeepFake",
   },
   {
+  title: "QVista",
+  image: project2,
+  description:
+    "QVista is a smart and user-friendly digital queue management system designed to streamline check-ins and reduce wait times. Users can effortlessly join the queue, while admins manage flow through real-time controls and status updates. With its clean interface and seamless experience.",
+  technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
+  github: "https://github.com/BavithSuvarna/VQ",
+  demo: "https://qvista.vercel.app"
+},
+  {
     title: "FakeShield",
-    image: project2,
+    image: project3,
     description:
       "FakeShield is a machine learning-based system that detects fake social media accounts and AI-generated content by analyzing user behavior, profile data, and image authenticity.",
     technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
@@ -64,7 +74,7 @@ export const PROJECTS = [
   },
   {
   title: "My Portfolio",
-  image: project3,
+  image: project4,
   description:
     "My personal portfolio website to showcase my skills, projects, and contact details.",
   technologies: ["React", "TailwindCSS", "Vercel"],
@@ -74,7 +84,7 @@ export const PROJECTS = [
 
   {
     title: "Personal Expense Tracker",
-    image: project4,
+    image: project5,
     description:
       "A simple Node.js app for managing personal expenses: log new expenses, retrieve them by category or date, and analyze spending patterns. Features include spending analysis and daily/weekly/monthly summaries via cron jobs.",
     technologies: ["Node.js"],
