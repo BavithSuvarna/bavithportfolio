@@ -24,7 +24,7 @@ const Contact = () => {
           <FaEnvelope className="hover:text-blue-400 transition-colors duration-300" />
         </a>
         <a
-          href="https://www.linkedin.com/in/bavith-suvarna"
+          href="https://www.linkedin.com/in/bavithlsuvarna"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
