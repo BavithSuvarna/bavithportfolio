@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/BavithSuvarnaLogo.png";
+// import logo from "../assets/BavithSuvarnaLogo.png";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
   <div className="flex items-center justify-between max-w-screen-xl mx-auto">
     {/* Left: Logo and My Portfolio Text */}
     <div className="flex flex-shrink-0 items-center">
-      <img className="mx-2 w-12" src={logo} alt="logo" />
+      {/* <img className="mx-2 w-12" src={logo} alt="logo" /> */}
       <span className="text-3xl text-white font-bold ml-2">My Portfolio</span>
     </div>
 
