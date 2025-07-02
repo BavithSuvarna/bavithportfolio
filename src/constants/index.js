@@ -61,7 +61,7 @@ export const PROJECTS = [
   description:
     "QVista is a smart and user-friendly digital queue management system designed to streamline check-ins and reduce wait times. Users can effortlessly join the queue, while admins manage flow through real-time controls and status updates. With its clean interface and seamless experience.",
   technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
-  github: "https://github.com/BavithSuvarna/VQ",
+  github: "https://github.com/BavithSuvarna/QVista",
   demo: "https://qvista.vercel.app"
 },
   {
