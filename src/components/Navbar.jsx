@@ -20,8 +20,9 @@ const Navbar = () => {
       <a href="#projects" className="hover:text-purple-400 transition font-semibold text-white">Projects</a>
       <a href="#technologies" className="hover:text-purple-400 transition font-semibold text-white">Experience</a>
       <a href="#contact" className="hover:text-purple-400 transition font-semibold text-white">Contact</a>
+      <a href="/Bavith_Resume.pdf" download className="bg-gradient-to-r from-cyan-400 via-teal-500 to-emerald-400 bg-clip-text text-transparent
+hover:text-purple-400 transition font-semibold ">Resume</a>
     </div>
-
     {/* Hamburger */}
     <div className="md:hidden z-50 pr-4">
       <button onClick={() => setMenuOpen(!menuOpen)}>
@@ -37,6 +38,7 @@ const Navbar = () => {
       <a href="#projects" onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Projects</a>
       <a href="#technologies" onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Experience</a>
       <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Contact</a>
+      <a href="/Bavith_Resume.pdf" download onClick={() => setMenuOpen(false)} className="hover:text-purple-400 transition">Resume</a>
     </div>
   )}
 </nav>
