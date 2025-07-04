@@ -69,7 +69,7 @@ export const PROJECTS = [
   title: "Task Manager",
   image: project3,
   description:
-    "Task Manager is a sleek and responsive full-stack web application designed to help users stay organized and productive. It offers a seamless experience for registering, logging in, and managing daily tasks. Users can add, edit, complete, and delete tasks, while the backend ensures secure authentication and real-time data storage using MongoDB. With a clean interface and robust functionality, this app is built for efficiency on both desktop and mobile devices.",
+    "Task Manager is a responsive full-stack web app that lets users register, log in, and manage tasks efficiently. It supports task creation, editing, completion, and deletion with a clean and intuitive UI. Built using the MERN stack and optimized for all devices.",
   technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
   github: "https://github.com/BavithSuvarna/Task-Manager",
   demo: "https://taskymanager.vercel.app"
