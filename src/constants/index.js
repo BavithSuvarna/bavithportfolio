@@ -3,6 +3,7 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project-5.jpg";
+import project6 from "../assets/projects/project-6.jpg";
 
 import achievement1 from "../assets/achievements/achievement-1.jpg";
 import achievement2 from "../assets/achievements/achievement-2.jpg";
@@ -64,9 +65,18 @@ export const PROJECTS = [
   github: "https://github.com/BavithSuvarna/QVista",
   demo: "https://qvista.vercel.app"
 },
+{
+  title: "Task Manager",
+  image: project3,
+  description:
+    "Task Manager is a sleek and responsive full-stack web application designed to help users stay organized and productive. It offers a seamless experience for registering, logging in, and managing daily tasks. Users can add, edit, complete, and delete tasks, while the backend ensures secure authentication and real-time data storage using MongoDB. With a clean interface and robust functionality, this app is built for efficiency on both desktop and mobile devices.",
+  technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
+  github: "https://github.com/BavithSuvarna/Task-Manager",
+  demo: "https://taskymanager.vercel.app"
+},
   {
     title: "FakeShield",
-    image: project3,
+    image: project4,
     description:
       "FakeShield is a machine learning-based system that detects fake social media accounts and AI-generated content by analyzing user behavior, profile data, and image authenticity.",
     technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
@@ -74,7 +84,7 @@ export const PROJECTS = [
   },
   {
   title: "My Portfolio",
-  image: project4,
+  image: project5,
   description:
     "My personal portfolio website to showcase my skills, projects, and contact details.",
   technologies: ["React", "TailwindCSS", "Vercel"],
@@ -84,7 +94,7 @@ export const PROJECTS = [
 
   {
     title: "Personal Expense Tracker",
-    image: project5,
+    image: project6,
     description:
       "A simple Node.js app for managing personal expenses: log new expenses, retrieve them by category or date, and analyze spending patterns. Features include spending analysis and daily/weekly/monthly summaries via cron jobs.",
     technologies: ["Node.js"],
