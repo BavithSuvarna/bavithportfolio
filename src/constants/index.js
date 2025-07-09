@@ -4,6 +4,7 @@ import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project-5.jpg";
 import project6 from "../assets/projects/project-6.jpg";
+import project7 from "../assets/projects/project-7.jpg";
 
 import achievement1 from "../assets/achievements/achievement-1.jpg";
 import achievement2 from "../assets/achievements/achievement-2.jpg";
@@ -61,7 +62,7 @@ export const PROJECTS = [
   image: project2,
   description:
     "QVista is a smart and user-friendly digital queue management system designed to streamline check-ins and reduce wait times. Users can effortlessly join the queue, while admins manage flow through real-time controls and status updates. With its clean interface and seamless experience.",
-  technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
+  technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs", "Git"],
   github: "https://github.com/BavithSuvarna/QVista",
   demo: "https://qvista.vercel.app"
 },
@@ -70,13 +71,22 @@ export const PROJECTS = [
   image: project3,
   description:
     "Task Manager is a responsive full-stack web app that lets users register, log in, and manage tasks efficiently. It supports task creation, editing, completion, and deletion with a clean and intuitive UI. Built using the MERN stack and optimized for all devices.",
-  technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
+  technologies: ["MERN Stack", "REST APIs","JWT Authentication"],
   github: "https://github.com/BavithSuvarna/Task-Manager",
   demo: "https://taskymanager.vercel.app"
 },
+{
+  title: "Venture Jobs",
+  image: project4,
+  description:
+    "VentureJobs is a responsive job listing platform built with React, Node.js, and Express, supporting job creation, browsing, and detailed views. It uses MongoDB for data storage and RESTful APIs for smooth backend integration. The project features dynamic routing, clean UI, and is deployed using Vercel with Git for version control.",
+  technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs"],
+  github: "https://github.com/BavithSuvarna/venturejobs",
+  demo: "https://venturejobs.vercel.app"
+},
   {
     title: "FakeShield",
-    image: project4,
+    image: project5,
     description:
       "FakeShield is a machine learning-based system that detects fake social media accounts and AI-generated content by analyzing user behavior, profile data, and image authenticity.",
     technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
@@ -84,7 +94,7 @@ export const PROJECTS = [
   },
   {
   title: "My Portfolio",
-  image: project5,
+  image: project6,
   description:
     "My personal portfolio website to showcase my skills, projects, and contact details.",
   technologies: ["React", "TailwindCSS", "Vercel"],
@@ -94,7 +104,7 @@ export const PROJECTS = [
 
   {
     title: "Personal Expense Tracker",
-    image: project6,
+    image: project7,
     description:
       "A simple Node.js app for managing personal expenses: log new expenses, retrieve them by category or date, and analyze spending patterns. Features include spending analysis and daily/weekly/monthly summaries via cron jobs.",
     technologies: ["Node.js"],
