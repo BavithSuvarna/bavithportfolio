@@ -20,7 +20,7 @@ const Navbar = () => {
       <a href="#projects" className="hover:text-purple-400 transition font-semibold text-white">Projects</a>
       <a href="#technologies" className="hover:text-purple-400 transition font-semibold text-white">Experience</a>
       <a href="#contact" className="hover:text-purple-400 transition font-semibold text-white">Contact</a>
-      <a href="/Bavith_Resume.pdf" download className="bg-gradient-to-r from-cyan-400 via-teal-500 to-emerald-400 bg-clip-text text-transparent
+      <a href="/Bavith_L_Suvarna_Resume.pdf" download className="bg-gradient-to-r from-cyan-400 via-teal-500 to-emerald-400 bg-clip-text text-transparent
 hover:text-purple-400 transition font-semibold ">Resume</a>
     </div>
     {/* Hamburger */}
