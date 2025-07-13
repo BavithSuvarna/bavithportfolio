@@ -18,7 +18,7 @@ const CERTIFICATIONS = [
     image: openaiCert,
   },
   {
-    title: "AWS Certified Cloud Practitioner",
+    title: "AWS Certified Cloud Practitioner Exam [Certification Course].",
     link: "https://media.geeksforgeeks.org/courses/certificates/d8ff8b4ea9e30f140cea82d793802205.pdf",
     image: awsCert,
   },
