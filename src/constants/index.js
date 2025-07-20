@@ -62,7 +62,7 @@ export const PROJECTS = [
   image: project2,
   description:
     "QVista is a smart and user-friendly digital queue management system designed to streamline check-ins and reduce wait times. Users can effortlessly join the queue, while admins manage flow through real-time controls and status updates. With its clean interface and seamless experience.",
-  technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs", "Git"],
+  technologies: ["MERN Stack", "REST APIs", "Git"],
   github: "https://github.com/BavithSuvarna/QVista",
   demo: "https://qvista.vercel.app"
 },
@@ -80,7 +80,7 @@ export const PROJECTS = [
   image: project4,
   description:
     "VentureJobs is a responsive job listing platform built with React, Node.js, and Express, supporting job creation, browsing, and detailed views. It uses MongoDB for data storage and RESTful APIs for smooth backend integration. The project features dynamic routing, clean UI, and is deployed using Vercel with Git for version control.",
-  technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs"],
+  technologies: ["MERN Stack", "REST APIs"],
   github: "https://github.com/BavithSuvarna/venturejobs",
   demo: "https://venturejobs.vercel.app"
 },
@@ -106,9 +106,11 @@ export const PROJECTS = [
     title: "Personal Expense Tracker",
     image: project7,
     description:
-      "A simple Node.js app for managing personal expenses: log new expenses, retrieve them by category or date, and analyze spending patterns. Features include spending analysis and daily/weekly/monthly summaries via cron jobs.",
-    technologies: ["Node.js"],
-    github: "https://github.com/BavithSuvarna/expense-tracker",
+      "A full-stack application that allows users to securely sign up, log in, and manage expenses in real time. Expenses can be added, edited, deleted, or filtered through a clean and responsive dashboard with category-wise summaries.",
+    technologies: ["MERN Stack", "JWT Authentication", "Recharts", "REST APIs"],
+    github: "https://github.com/BavithSuvarna/Personal-Expense-Tracker",
+   demo: "https://easespend.vercel.app"
+
   },
 ];
 
