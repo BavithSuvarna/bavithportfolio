@@ -14,22 +14,8 @@ const container = (delay) => ({
 const Hero = () => {
   return (
     <div className="border-b border-neutral-900 pb-8 lg:mb-36">
-      {/* inline styles for floating animation */}
-      <style>{`
-        @keyframes floating {
-          0% { transform: translateY(0); }
-          50% { transform: translateY(10px); }
-          100% { transform: translateY(0); }
-        }
-        .floating-img {
-          animation-name: floating;
-          animation-duration: 3s;
-          animation-iteration-count: infinite;
-          animation-timing-function: ease-in-out;
-        }
-      `}</style>
-
       <div className="max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 px-4">
+        
         {/* LEFT SECTION */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <motion.h1
@@ -78,7 +64,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.2 }}
             src={profilePic}
             alt="Bavith L Suvarna"
-            className="floating-img mb-10 w-40 h-40 sm:w-60 sm:h-60 lg:w-72 lg:h-72 object-cover rounded-full shadow-lg dark:bg-neutral-900"
+            className="mb-10 w-40 h-40 sm:w-60 sm:h-60 lg:w-72 lg:h-72 object-cover rounded-full shadow-lg dark:bg-neutral-900"
           />
         </div>
       </div>
