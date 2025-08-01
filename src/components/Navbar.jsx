@@ -15,7 +15,7 @@ const Navbar = () => {
     </div>
 
     {/* Desktop Links */}
-    <div className="hidden md:flex m-8 items-center justify-center gap-12 text-2xl text-white">
+    <div className="hidden md:flex m-8 items-center justify-center gap-6 text-2xl text-white">
       <a href="#journey" className="hover:text-purple-400 transition font-semibold text-white">Journey</a>
       <a href="#projects" className="hover:text-purple-400 transition font-semibold text-white">Projects</a>
       <a href="#technologies" className="hover:text-purple-400 transition font-semibold text-white">Experience</a>
