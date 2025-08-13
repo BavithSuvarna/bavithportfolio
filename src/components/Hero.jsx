@@ -45,15 +45,30 @@ const Hero = () => {
             Feel free to reach out if you want to share ideas and collaborate!
           </motion.span>
 
-          <motion.a
-            href="mailto:suvarnabavith@gmail.com"
-            variants={container(1.2)}
-            initial="hidden"
-            animate="visible"
-            className="inline-block mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-medium shadow-md hover:scale-105 transition-transform"
-          >
-            Contact Me
-          </motion.a>
+         {/* BUTTONS */}
+<motion.div
+  variants={container(1.2)}
+  initial="hidden"
+  animate="visible"
+  className="mt-6 flex flex-wrap justify-center lg:justify-start gap-4"
+>
+  <a
+    href="mailto:suvarnabavith@gmail.com"
+    className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-medium shadow-md hover:scale-105 transition-transform"
+  >
+    Contact Me
+  </a>
+
+  <a
+    href="/Bavith_Resume.pdf" // <-- put your actual resume file path here
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-medium shadow-md hover:scale-105 transition-transform"
+  >
+   Download Resume
+  </a>
+</motion.div>
+
         </div>
 
         {/* RIGHT SECTION */}
