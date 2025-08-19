@@ -1,4 +1,3 @@
-// Achievements.jsx
 import { ACHIEVEMENTS } from "../constants";
 import { motion } from "framer-motion";
 
@@ -22,42 +21,27 @@ const Achievements = () => {
               transition={{ duration: 1.5 }}
               className="w-full lg:w-1/4"
             >
-              <div className="grid grid-cols-2 gap-2">
-                <img
-                  src={achievement.image1}
-                  width={150}
-                  height={150}
-                  alt="Achievement Image 1"
-                  className="mb-2 rounded object-cover"
-                />
-                <img
-                  src={achievement.image2}
-                  width={150}
-                  height={150}
-                  alt="Achievement Image 2"
-                  className="mb-2 rounded object-cover"
-                />
-                <img
-                  src={achievement.image3}
-                  width={150}
-                  height={150}
-                  alt="Achievement Image 3"
-                  className="mb-2 rounded object-cover"
-                />
-                <img
-                  src={achievement.image4}
-                  width={150}
-                  height={150}
-                  alt="Achievement Image 4"
-                  className="mb-2 rounded object-cover"
-                />
-              </div>
+              {achievement.images?.length > 0 && (
+                <div className="grid grid-cols-2 gap-2">
+                  {achievement.images.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      width={150}
+                      height={150}
+                      alt={`Achievement Image ${idx + 1}`}
+                      className="mb-2 rounded object-cover"
+                    />
+                  ))}
+                </div>
+              )}
             </motion.div>
+
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1.5 }}
-              className="w-full max-w-xl lh:w-3/4"
+              className="w-full max-w-xl lg:w-3/4"
             >
               <h6 className="mb-2 font-semibold">{achievement.title}</h6>
               <p className="mb-4 text-neutral-400">{achievement.description}</p>

@@ -10,6 +10,8 @@ import achievement1 from "../assets/achievements/achievement-1.jpg";
 import achievement2 from "../assets/achievements/achievement-2.jpg";
 import achievement3 from "../assets/achievements/achievement-3.jpg";
 import achievement4 from "../assets/achievements/achievement-4.jpg";
+import achievement5 from "../assets/achievements/achievement-5.jpg";
+import achievement6 from "../assets/achievements/achievement-6.jpg";
 
 
 export const HERO_CONTENT = `I’m currently studying Computer Science at Sahyadri College of Engineering and Management Mangalore. I’m always looking for new challenges and love exploring ways to turn ideas into real, working solutions. I believe in continuous learning, and whether it’s through building projects or connecting with others, I’m always growing and evolving. I’m excited to see where this journey takes me and would love to connect with others who are equally passionate about tech, learning, and making an impact.
@@ -116,13 +118,17 @@ export const PROJECTS = [
 
 export const ACHIEVEMENTS = [
   {
-    title: "TechVision Runner-Up",
-    image1: achievement1,
-    image2: achievement2,
-    image3: achievement3,
-    image4: achievement4,
+    title: "TechVision-2025 Runner-Up",
+    images: [achievement1, achievement2, achievement3, achievement4],
     description:
       "Secured 2nd place for the DeepLock project at TechVision-2025, showcasing innovation in AI-based deepfake detection and blockchain security.",
+    technologies: [],
+  },
+  {
+    title: "Winner – Battle of Blue Whales: An Ultimate Auction Showdown",
+    images: [achievement5, achievement6], // only 2 images here
+    description:
+      "Achieved first place in the “Battle of Blue Whales – An Ultimate Auction Showdown” competition held on 24th May 2025 at Sahyadri Carnival. Demonstrated strong analytical thinking, decision-making, and strategic bidding skills to outperform participants from various backgrounds.",
     technologies: [],
   },
 ];
