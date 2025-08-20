@@ -125,7 +125,7 @@ export const ACHIEVEMENTS = [
     technologies: [],
   },
   {
-    title: "Winner – Battle of Blue Whales: An Ultimate Auction Showdown",
+    title: "Winners – Battle of Blue Whales: An Ultimate Auction Showdown",
     images: [achievement5, achievement6], // only 2 images here
     description:
       "Achieved first place in the “Battle of Blue Whales – An Ultimate Auction Showdown” competition held on 24th May 2025 at Sahyadri Carnival. Demonstrated strong analytical thinking, decision-making, and strategic bidding skills to outperform participants from various backgrounds.",
