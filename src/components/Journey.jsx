@@ -64,7 +64,7 @@ const About = () => {
             <p className="my-2 max-w-xl py-4 text-center lg:text-left group-hover:text-neutral-300 text-base lg:text-lg leading-relaxed">
               <strong className="text-white text-xl">Poornaprajna PU College</strong>
               <br />
-              Scored 93.5% in my 12th boards, a proud moment for me and my family!
+                Scored 93.5% in my 12th boards, which helped me build a strong academic foundation.
             </p>
           </div>
         </motion.div>
