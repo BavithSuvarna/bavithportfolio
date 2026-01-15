@@ -13,6 +13,7 @@ import achievement4 from "../assets/achievements/achievement-4.jpg";
 import achievement5 from "../assets/achievements/achievement-5.jpg";
 import achievement6 from "../assets/achievements/achievement-6.jpg";
 
+import experience1 from "../assets/experiences/experience-1.jpeg";
 
 export const HERO_CONTENT = `I’m currently studying Computer Science at Sahyadri College of Engineering and Management Mangalore. I’m always looking for new challenges and love exploring ways to turn ideas into real, working solutions. I believe in continuous learning, and whether it’s through building projects or connecting with others, I’m always growing and evolving. I’m excited to see where this journey takes me and would love to connect with others who are equally passionate about tech, learning, and making an impact.
 `;
@@ -21,32 +22,12 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "Jan 2026 - Present",
+    role: "Software Engineer Intern",
+    company: "Anvelos Softwares",
+    image: experience1,
+    description: `Working as a Software Engineer Intern at Anvelos Softwares, contributing to the development of innovative software solutions.`,
+    technologies: ["Next.js"], // Added some defaults, user can change
   },
 ];
 
@@ -60,32 +41,32 @@ export const PROJECTS = [
     github: "https://github.com/BavithSuvarna/DeepLock",
   },
   {
-  title: "QVista",
-  image: project2,
-  description:
-    "QVista is a smart and user-friendly digital queue management system designed to streamline check-ins and reduce wait times. Users can effortlessly join the queue, while admins manage flow through real-time controls and status updates. With its clean interface and seamless experience.",
-  technologies: ["MERN Stack", "REST APIs", "Git"],
-  github: "https://github.com/BavithSuvarna/QVista",
-  demo: "https://qvista.vercel.app"
-},
-{
-  title: "Task Manager",
-  image: project3,
-  description:
-    "Task Manager is a responsive full-stack web app that lets users register, log in, and manage tasks efficiently. It supports task creation, editing, completion, and deletion with a clean and intuitive UI. Built using the MERN stack and optimized for all devices.",
-  technologies: ["MERN Stack", "REST APIs","JWT Authentication"],
-  github: "https://github.com/BavithSuvarna/Task-Manager",
-  demo: "https://taskymanager.vercel.app"
-},
-{
-  title: "Venture Jobs",
-  image: project4,
-  description:
-    "VentureJobs is a responsive job listing platform built with React, Node.js, and Express, supporting job creation, browsing, and detailed views. It uses MongoDB for data storage and RESTful APIs for smooth backend integration. The project features dynamic routing, clean UI, and is deployed using Vercel with Git for version control.",
-  technologies: ["MERN Stack", "REST APIs"],
-  github: "https://github.com/BavithSuvarna/venturejobs",
-  demo: "https://venturejobs.vercel.app"
-},
+    title: "QVista",
+    image: project2,
+    description:
+      "QVista is a smart and user-friendly digital queue management system designed to streamline check-ins and reduce wait times. Users can effortlessly join the queue, while admins manage flow through real-time controls and status updates. With its clean interface and seamless experience.",
+    technologies: ["MERN Stack", "REST APIs", "Git"],
+    github: "https://github.com/BavithSuvarna/QVista",
+    demo: "https://qvista.vercel.app"
+  },
+  {
+    title: "Task Manager",
+    image: project3,
+    description:
+      "Task Manager is a responsive full-stack web app that lets users register, log in, and manage tasks efficiently. It supports task creation, editing, completion, and deletion with a clean and intuitive UI. Built using the MERN stack and optimized for all devices.",
+    technologies: ["MERN Stack", "REST APIs", "JWT Authentication"],
+    github: "https://github.com/BavithSuvarna/Task-Manager",
+    demo: "https://taskymanager.vercel.app"
+  },
+  {
+    title: "Venture Jobs",
+    image: project4,
+    description:
+      "VentureJobs is a responsive job listing platform built with React, Node.js, and Express, supporting job creation, browsing, and detailed views. It uses MongoDB for data storage and RESTful APIs for smooth backend integration. The project features dynamic routing, clean UI, and is deployed using Vercel with Git for version control.",
+    technologies: ["MERN Stack", "REST APIs"],
+    github: "https://github.com/BavithSuvarna/venturejobs",
+    demo: "https://venturejobs.vercel.app"
+  },
   {
     title: "FakeShield",
     image: project5,
@@ -95,14 +76,14 @@ export const PROJECTS = [
     github: "https://github.com/BavithSuvarna/FakeShield",
   },
   {
-  title: "My Portfolio",
-  image: project6,
-  description:
-    "My personal portfolio website to showcase my skills, projects, and contact details.",
-  technologies: ["React", "TailwindCSS", "Vercel"],
-  github: "https://github.com/BavithSuvarna/bavithportfolio",
-  demo: "https://bavithportfolio.vercel.app"
-},
+    title: "My Portfolio",
+    image: project6,
+    description:
+      "My personal portfolio website to showcase my skills, projects, and contact details.",
+    technologies: ["React", "TailwindCSS", "Vercel"],
+    github: "https://github.com/BavithSuvarna/bavithportfolio",
+    demo: "https://bavithportfolio.vercel.app"
+  },
 
   {
     title: "Personal Expense Tracker",
@@ -111,7 +92,7 @@ export const PROJECTS = [
       "A full-stack application that allows users to securely sign up, log in, and manage expenses in real time. Expenses can be added, edited, deleted, or filtered through a clean and responsive dashboard with category-wise summaries.",
     technologies: ["MERN Stack", "JWT Authentication", "Recharts", "REST APIs"],
     github: "https://github.com/BavithSuvarna/Personal-Expense-Tracker",
-   demo: "https://easespend.vercel.app"
+    demo: "https://easespend.vercel.app"
 
   },
 ];
