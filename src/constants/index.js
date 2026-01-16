@@ -38,7 +38,7 @@ export const PROJECTS = [
     description:
       "An AI-powered platform that detects deepfake media across multiple formats and securely records verification results using blockchain technology.",
     technologies: ["Python", "Tensorflow", "React", "Flask", "Smart Contracts(Blockchain)"],
-    github: "https://github.com/BavithSuvarna/DeepLock",
+    github: "https://github.com/BavithSuvarna/DeepGuard",
   },
   {
     title: "QVista",

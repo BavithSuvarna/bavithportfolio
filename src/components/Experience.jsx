@@ -29,6 +29,7 @@ const Experience = () => {
                                     alt={experience.company}
                                     className="mb-6 rounded"
                                 />
+                                <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
                             </motion.div>
                             <motion.div
                                 whileInView={{ opacity: 1, x: 0 }}
