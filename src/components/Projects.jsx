@@ -13,14 +13,8 @@ const Projects = () => {
       const itemWidth = cardWidth + gap;
       const currentScroll = container.scrollLeft;
 
-      // Find the previous slot (round down, or subtract 1 to ensure we move left if exactly aligned)
-      // Math.floor(currentScroll / itemWidth) gives the current index.
-      // If we are somewhat misaligned to the right, floor gives the "current" start index.
-      // We want index - 1.
-      // But if we are exactly aligned, we want index - 1 only.
-      // Only robust way: target position = (getCurrentIndex - 1) * itemWidth.
-
-      const targetScroll = Math.max(0, Math.floor((currentScroll - 1) / itemWidth) * itemWidth);
+      const currentIndex = Math.round(currentScroll / itemWidth);
+      const targetScroll = Math.max(0, (currentIndex - 1) * itemWidth);
 
       container.scrollTo({ left: targetScroll, behavior: "smooth" });
     }
@@ -34,8 +28,8 @@ const Projects = () => {
       const itemWidth = cardWidth + gap;
       const currentScroll = container.scrollLeft;
 
-      // Calculate next slot
-      const targetScroll = Math.ceil((currentScroll + 1) / itemWidth) * itemWidth;
+      const currentIndex = Math.round(currentScroll / itemWidth);
+      const targetScroll = (currentIndex + 1) * itemWidth;
 
       container.scrollTo({ left: targetScroll, behavior: "smooth" });
     }
