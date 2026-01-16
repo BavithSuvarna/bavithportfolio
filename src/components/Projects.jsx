@@ -1,138 +1,144 @@
-import { useState } from "react";
 import { PROJECTS } from "../constants";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaGithub, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Projects = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollContainerId = "projects-scroll-container";
 
-  const nextProject = () => {
-    setCurrentIndex((prev) => (prev === PROJECTS.length - 1 ? 0 : prev + 1));
+  const scrollLeft = () => {
+    const container = document.getElementById(scrollContainerId);
+    if (container) {
+      const cardWidth = container.firstElementChild?.offsetWidth || 300;
+      const gap = 24;
+      const itemWidth = cardWidth + gap;
+      const currentScroll = container.scrollLeft;
+
+      // Find the previous slot (round down, or subtract 1 to ensure we move left if exactly aligned)
+      // Math.floor(currentScroll / itemWidth) gives the current index.
+      // If we are somewhat misaligned to the right, floor gives the "current" start index.
+      // We want index - 1.
+      // But if we are exactly aligned, we want index - 1 only.
+      // Only robust way: target position = (getCurrentIndex - 1) * itemWidth.
+
+      const targetScroll = Math.max(0, Math.floor((currentScroll - 1) / itemWidth) * itemWidth);
+
+      container.scrollTo({ left: targetScroll, behavior: "smooth" });
+    }
   };
 
-  const prevProject = () => {
-    setCurrentIndex((prev) => (prev === 0 ? PROJECTS.length - 1 : prev - 1));
-  };
+  const scrollRight = () => {
+    const container = document.getElementById(scrollContainerId);
+    if (container) {
+      const cardWidth = container.firstElementChild?.offsetWidth || 300;
+      const gap = 24;
+      const itemWidth = cardWidth + gap;
+      const currentScroll = container.scrollLeft;
 
-  const currentProject = PROJECTS[currentIndex];
+      // Calculate next slot
+      const targetScroll = Math.ceil((currentScroll + 1) / itemWidth) * itemWidth;
+
+      container.scrollTo({ left: targetScroll, behavior: "smooth" });
+    }
+  };
 
   return (
-    <section id="projects">
-      <div className="border-b border-neutral-900 pb-16">
+    <section id="projects" className="border-b border-neutral-900 pb-4 pt-20">
+      <div className="max-w-screen-xl mx-auto px-4">
+        {/* Header & Buttons */}
+        {/* Header */}
         <motion.h2
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
-          className="my-20 text-center text-4xl"
+          className="mb-8 text-center text-4xl"
         >
           PROJECTS
         </motion.h2>
 
-        <div className="relative max-w-4xl mx-auto px-4">
-          <div className="flex items-center justify-center">
-            {/* Previous Button */}
-            <button
-              onClick={prevProject}
-              className="absolute left-0 lg:-left-12 z-10 p-2 bg-neutral-800/50 rounded-full hover:bg-neutral-700 text-white transition"
-            >
-              <FaChevronLeft size={24} />
-            </button>
+        {/* Navigation Buttons */}
+        <div className="flex justify-end gap-4 mb-8">
+          <button
+            onClick={scrollLeft}
+            className="p-3 rounded-lg bg-neutral-800 text-purple-400 hover:bg-neutral-700 hover:text-white transition-colors border border-neutral-700"
+            aria-label="Previous Project"
+          >
+            <FaArrowLeft />
+          </button>
+          <button
+            onClick={scrollRight}
+            className="p-3 rounded-lg bg-neutral-800 text-purple-400 hover:bg-neutral-700 hover:text-white transition-colors border border-neutral-700"
+            aria-label="Next Project"
+          >
+            <FaArrowRight />
+          </button>
+        </div>
 
-            {/* Project Card */}
-            <div className="w-full">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.4 }} // Faster transition for carousel feel
-                  className="flex flex-col lg:flex-row gap-8 bg-neutral-900/30 p-6 rounded-2xl border border-neutral-800"
+        {/* Horizontal Scroll Container */}
+        <div
+          id={scrollContainerId}
+          className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} // Hide scrollbar
+        >
+          {PROJECTS.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.33%-16px)] xl:min-w-[calc(25%-18px)] bg-neutral-900 rounded-2xl p-6 flex flex-col justify-between snap-start border border-neutral-800 hover:border-purple-500/30 transition duration-300"
+            >
+              <div>
+                {/* Image */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-xl mb-4"
+                />
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+
+                {/* Description */}
+                <p className="text-neutral-400 text-sm mb-4 line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Technologies Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2 py-1 bg-neutral-800 text-purple-400 text-[10px] rounded-md font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Links */}
+              <div className="flex gap-4 mt-auto">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 bg-neutral-800 rounded-lg text-white font-medium hover:bg-neutral-700 transition"
                 >
-                  {/* Image Section */}
-                  <div className="w-full lg:w-1/2">
-                    <img
-                      src={currentProject.image}
-                      alt={currentProject.title}
-                      className="w-full h-64 lg:h-80 object-cover rounded-xl"
-                    />
-                  </div>
-
-                  {/* Content Section */}
-                  <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                    <h3 className="mb-4 text-2xl font-bold text-white">
-                      {currentProject.title}
-                    </h3>
-                    <p className="mb-6 text-neutral-400 leading-relaxed">
-                      {currentProject.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {currentProject.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 text-sm font-medium text-purple-400 bg-neutral-800 rounded-lg"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex gap-4">
-                      <a
-                        href={currentProject.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-800 rounded-lg text-white hover:bg-neutral-700 transition"
-                      >
-                        <FaGithub size={18} />
-                        Code
-                      </a>
-                      {currentProject.demo && (
-                        <a
-                          href={currentProject.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-600 rounded-lg text-white hover:bg-purple-500 transition"
-                        >
-                          Live Demo
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* Next Button */}
-            <button
-              onClick={nextProject}
-              className="absolute right-0 lg:-right-12 z-10 p-2 bg-neutral-800/50 rounded-full hover:bg-neutral-700 text-white transition"
-            >
-              <FaChevronRight size={24} />
-            </button>
-          </div>
-
-          <div className="mt-8 flex justify-center">
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-purple-500 text-purple-400 rounded-full hover:bg-purple-500/10 transition duration-300"
-            >
-              View All Projects
-            </Link>
-          </div>
-
-          {/* Dots Indicator (Optional but nice) */}
-          <div className="flex justify-center mt-4 gap-2">
-            {PROJECTS.map((_, idx) => (
-              <div
-                key={idx}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'bg-purple-500 w-4' : 'bg-neutral-700'}`}
-              />
-            ))}
-          </div>
-
+                  <FaGithub /> Code
+                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 bg-purple-600 rounded-lg text-white font-medium hover:bg-purple-500 transition"
+                  >
+                    Live Demo
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
