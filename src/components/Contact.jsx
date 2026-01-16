@@ -50,6 +50,16 @@ const Contact = () => {
           </a>
         </div>
 
+        {/* Navigation Links */}
+        <div className="mt-8 flex flex-wrap justify-center gap-8 text-neutral-400">
+          <a href="#" className="hover:text-white transition-colors duration-300">Home</a>
+          <a href="#experience" className="hover:text-white transition-colors duration-300">Experience</a>
+          <a href="#projects" className="hover:text-white transition-colors duration-300">Projects</a>
+          <a href="#technologies" className="hover:text-white transition-colors duration-300">Tech Arsenal</a>
+          <a href="#achievements" className="hover:text-white transition-colors duration-300">Achievements</a>
+          <a href="#contact" className="hover:text-white transition-colors duration-300">Contact</a>
+        </div>
+
         {/* Copyright Section */}
         <div className="mt-8 text-center text-sm text-neutral-500">
           © 2025 Bavith L Suvarna.
