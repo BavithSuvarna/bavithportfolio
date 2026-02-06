@@ -52,7 +52,13 @@ const Experience = () => {
                                 <h6 className="mb-2 font-semibold">
                                     {experience.role} -{" "}
                                     <span className="text-sm text-purple-100">
-                                        {experience.company}
+                                        {experience.companyUrl ? (
+                                            <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-purple-300">
+                                                {experience.company}
+                                            </a>
+                                        ) : (
+                                            experience.company
+                                        )}
                                     </span>
                                 </h6>
                                 <p className="mb-4 text-neutral-400">
