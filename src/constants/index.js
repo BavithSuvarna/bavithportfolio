@@ -27,7 +27,8 @@ export const EXPERIENCES = [
     company: "Anvelos Softwares",
     image: experience1,
     description: `Working as a Software Engineer Intern at Anvelos Softwares, contributing to the development of innovative software solutions.`,
-    technologies: ["Next.js"], // Added some defaults, user can change
+    technologies: ["Next.js"],
+    companyUrl: "https://www.anvelos.com/",
   },
 ];
 

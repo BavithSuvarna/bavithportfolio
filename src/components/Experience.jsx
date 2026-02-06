@@ -22,13 +22,25 @@ const Experience = () => {
                                 transition={{ duration: 1.5 }}
                                 className="w-full lg:w-1/4"
                             >
-                                <img
-                                    src={experience.image}
-                                    width={150}
-                                    height={150}
-                                    alt={experience.company}
-                                    className="mb-6 rounded"
-                                />
+                                {experience.companyUrl ? (
+                                    <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={experience.image}
+                                            width={150}
+                                            height={150}
+                                            alt={experience.company}
+                                            className="mb-6 rounded"
+                                        />
+                                    </a>
+                                ) : (
+                                    <img
+                                        src={experience.image}
+                                        width={150}
+                                        height={150}
+                                        alt={experience.company}
+                                        className="mb-6 rounded"
+                                    />
+                                )}
                                 <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
                             </motion.div>
                             <motion.div
