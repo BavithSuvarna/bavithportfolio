@@ -14,7 +14,7 @@ import achievement5 from "../assets/achievements/achievement-5.jpg";
 import achievement6 from "../assets/achievements/achievement-6.jpg";
 
 import experience1 from "../assets/experiences/experience-1.jpeg";
-
+import experience2 from "../assets/experiences/experience-2.jpg";
 export const HERO_CONTENT = `I’m currently studying Computer Science at Sahyadri College of Engineering and Management Mangalore. I’m always looking for new challenges and love exploring ways to turn ideas into real, working solutions. I believe in continuous learning, and whether it’s through building projects or connecting with others, I’m always growing and evolving. I’m excited to see where this journey takes me and would love to connect with others who are equally passionate about tech, learning, and making an impact.
 `;
 
@@ -29,6 +29,14 @@ export const EXPERIENCES = [
     description: `Working as a Software Engineer Intern at Anvelos Softwares, contributing to the development of innovative software solutions.`,
     technologies: ["Next.js"],
     companyUrl: "https://www.anvelos.com/",
+  },
+  {
+    year: "Feb 2026 - Present",
+    role: "Web Development Intern",
+    company: "PAT Technologies",
+    image: experience2,
+    description: `Working as a Web Development Intern at PAT Technologies.`,
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
