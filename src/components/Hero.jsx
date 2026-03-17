@@ -60,7 +60,7 @@ const Hero = () => {
   </a>
 
   <a
-    href="/Bavith_Resume.pdf" // <-- put your actual resume file path here
+    href="/Bavith_Software_Engineer.pdf" // <-- put your actual resume file path here
     target="_blank"
     rel="noopener noreferrer"
     className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-medium shadow-md hover:scale-105 transition-transform"
