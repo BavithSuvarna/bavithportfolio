@@ -44,7 +44,7 @@ const About = () => {
                 Sahyadri College of Engineering and Management
               </strong>
               <br />
-              I'm currently pursuing my B.E in Computer Science & Engineering with a CGPA of 9.36
+              I'm currently pursuing my B.E in Computer Science & Engineering with a CGPA of 9.33
             </p>
           </div>
         </motion.div>
