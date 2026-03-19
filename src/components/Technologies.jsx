@@ -2,11 +2,11 @@ import { RiReactjsLine } from "react-icons/ri";       // React
 import { SiFlask } from "react-icons/si";             // Flask
 import { DiJava, DiMongodb } from "react-icons/di";              // Java
 import { FaCss3Alt, FaPython,FaNodeJs, FaGitAlt } from "react-icons/fa";            // Python
-import { SiJavascript } from "react-icons/si";  // Blockchain
-// import { SiTailwindcss } from "react-icons/si";             // Tailwind
+import { SiJavascript } from "react-icons/si"; 
+import { SiTailwindcss } from "react-icons/si";             // Tailwind
 import { SiTableau } from "react-icons/si";           // Tableau
-import { FaHtml5} from "react-icons/fa";           // Tableau
-
+import { FaHtml5} from "react-icons/fa";          //HTML
+import { SiNextdotjs, SiKotlin, SiPostgresql } from "react-icons/si";
 import {animate, motion} from "framer-motion";
 
 const iconVariants = (duration) => ({
@@ -116,7 +116,7 @@ const Technologies = () => {
   <p className="mt-2 text-white text-sm">JavaScript</p>
 </motion.div>
 
-{/* <motion.div 
+<motion.div 
   variants={iconVariants(4)}
   initial="initial"
   animate="animate"
@@ -124,7 +124,7 @@ const Technologies = () => {
 >
   <SiTailwindcss className="text-7xl text-[#38BDF8]" />
   <p className="mt-2 text-white text-sm">Tailwind</p>
-</motion.div> */}
+</motion.div>
 
 <motion.div 
   variants={iconVariants(6)}
@@ -154,6 +154,36 @@ const Technologies = () => {
 >
   <SiTableau className="text-7xl text-[#E97627]" />
   <p className="mt-2 text-white text-sm">Tableau</p>
+</motion.div>
+
+<motion.div 
+  variants={iconVariants(3)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 flex flex-col items-center"
+>
+  <SiNextdotjs className="text-7xl text-white" />
+  <p className="mt-2 text-white text-sm">Next.js</p>
+</motion.div>
+
+<motion.div 
+  variants={iconVariants(6)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 flex flex-col items-center"
+>
+  <SiKotlin className="text-7xl text-[#7F52FF]" />
+  <p className="mt-2 text-white text-sm">Kotlin</p>
+</motion.div>
+
+<motion.div 
+  variants={iconVariants(3)}
+  initial="initial"
+  animate="animate"
+  className="rounded-2xl border-4 border-neutral-800 p-4 flex flex-col items-center"
+>
+  <SiPostgresql className="text-7xl text-[#336791]" />
+  <p className="mt-2 text-white text-sm">PostgreSQL</p>
 </motion.div>
 
       </motion.div>
