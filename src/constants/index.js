@@ -36,7 +36,7 @@ export const EXPERIENCES = [
     company: "PAT Technologies",
     image: experience2,
     description: `Working as a Web Development Intern at PAT Technologies.`,
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["ReactJS", "Python Libraries", "JavaScript"],
   },
 ];
 
