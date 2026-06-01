@@ -22,7 +22,7 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "Jan 2026 - Present",
+    year: "Jan 2026 - May 2026",
     role: "Software Engineer Intern",
     company: "Anvelos Softwares",
     image: experience1,
@@ -31,7 +31,7 @@ export const EXPERIENCES = [
     companyUrl: "https://www.anvelos.com/",
   },
   {
-    year: "Feb 2026 - Present",
+    year: "Feb 2026 - May 2026",
     role: "Web Development Intern",
     company: "PAT Technologies",
     image: experience2,
